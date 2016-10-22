@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.fleek.tracking"
+    version="0.7.0">
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <name>Tracking</name>
+  <description>Android Referrer Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>tracking</keywords>
+
+
+  <js-module src="www/tracking.js" name="tracking"> 
+    <clobbers target="tracking" /> 
+  </js-module> 
+
+  <platform name="android">
+    <source-file src="src/android/org/fleek/tracking/TrackingReceiver.java" target-dir="src/org/fleek/tracking/" />
+    <source-file src="src/android/org/fleek/tracking/TrackingPlugin.java" target-dir="src/org/fleek/tracking/" />
+
+	  <config-file target="AndroidManifest.xml" parent="/manifest/application">
+		  <receiver android:exported="true" android:name="org.fleek.tracking.TrackingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </config-file>
+  </platform>
+</plugin>
