@@ -29,7 +29,7 @@ public class TrackingPlugin extends CordovaPlugin {
 
 
     @Override
-    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, final JSONArray args, final CallbackContext callbackContext) throws JSONException {
 
         if (("get").equals(action)) {
             cordova.getThreadPool().execute(new Runnable() {
