@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.Context;
 import android.content.Intent;
+import android.app.Activity;
 
 import android.util.Log;
 
@@ -28,7 +29,7 @@ public class TrackingPlugin extends CordovaPlugin {
 
 
     @Override
-    public boolean execute(String action, JSONArray data, final CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
 
         if (("get").equals(action)) {
             cordova.getThreadPool().execute(new Runnable() {
