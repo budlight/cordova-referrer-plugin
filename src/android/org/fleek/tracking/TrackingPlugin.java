@@ -1,10 +1,19 @@
 package org.fleek.tracking;
 
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.content.Context;
+import android.content.Intent;
+
+import android.util.Log;
+
+
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 
 public class TrackingPlugin extends CordovaPlugin {
+    private static final String TAG = "TrackingPlugin";
     public static final String PREFS_NAME = "Tracking";
     private SharedPreferences sharedPref;
     private SharedPreferences.Editor editor;
@@ -19,7 +28,7 @@ public class TrackingPlugin extends CordovaPlugin {
 
 
     @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray data, final CallbackContext callbackContext) throws JSONException {
 
         if (("get").equals(action)) {
             cordova.getThreadPool().execute(new Runnable() {
