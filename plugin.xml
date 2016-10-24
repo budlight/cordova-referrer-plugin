@@ -14,7 +14,7 @@
 
 
   <js-module src="www/tracking.js" name="tracking"> 
-    <clobbers target="tracking" /> 
+    <clobbers target="trackingPlugin" /> 
   </js-module> 
 
   <platform name="android">
