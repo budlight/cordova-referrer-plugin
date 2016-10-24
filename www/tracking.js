@@ -2,7 +2,7 @@ var exec = require('cordova/exec');
 
 
 var trackingPlugin = {
-    getTracking: function(key, successCallback, errorCallback){
+    get: function(key, successCallback, errorCallback){
         cordova.exec(successCallback, errorCallback, 'TrackingPlugin', 'getTracking')
     }
     
