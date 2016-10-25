@@ -30,13 +30,14 @@ public class TrackingPlugin extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, final JSONArray args, final CallbackContext callbackContext) throws JSONException {
-
-        if (("get").equals(action)) {
+        Log.d(TAG, "execute");
+        if (action.equals("get")) { {
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
                     try {
             /* getting arguments */
                         String ref = args.getString(0);
+                        Log.d(TAG, "getting item");
                         //System.out.println("Receveived reference: " + ref);
                         String s = sharedPref.getString(ref, "null");
                         callbackContext.success(s);
