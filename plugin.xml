@@ -22,7 +22,7 @@
     <source-file src="src/android/org/fleek/tracking/TrackingPlugin.java" target-dir="src/org/fleek/tracking/" />
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="TrackingPlugin" >
-        <param name="android-package" value="org.fleek.TrackingPlugin"/>
+        <param name="android-package" value="org.fleek.tracking.TrackingPlugin"/>
       </feature>
     </config-file>
 	  <config-file target="AndroidManifest.xml" parent="/manifest/application">
