@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="org.fleek.tracking"
-    version="0.7.0">
-  <engines>
-    <engine name="cordova" version=">=3.4.0"/>
-  </engines>
+    id="cordova-referrer-plugin"
+    version="0.7.1">
 
-  <name>Tracking</name>
+  <repo>https://github.com/budlight/cordova-referrer-plugin.git</repo>
+  <issue>https://github.com/budlight/cordova-referrer-plugin/issues</issue>
+  <name>Cordova Referrer Plugin</name>
   <description>Android Referrer Plugin</description>
   <license>Apache 2.0</license>
-  <keywords>tracking</keywords>
+  <keywords>cordova,tracking</keywords>
 
 
   <js-module src="www/tracking.js" name="tracking"> 
