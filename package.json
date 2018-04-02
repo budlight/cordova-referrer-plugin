@@ -1,0 +1,32 @@
+{
+  "name": "org.fleek.tracking",
+  "version": "0.7.0",
+  "description": "Android Referrer Plugin",
+  "cordova": {
+    "id": "org.fleek.tracking",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/budlight/cordova-referrer-plugin.git"
+  },
+  "keywords": [
+    "tracking",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/budlight/cordova-referrer-plugin/issues"
+  },
+  "homepage": "https://github.com/budlight/cordova-referrer-plugin#readme"
+}
